@@ -693,6 +693,48 @@ section { padding: 80px 0; }
 }
 .btn-white-ghost:hover { background: rgba(255,255,255,0.1); color: #fff; }
 
+
+/* ─── plan-spots ─── */
+.plan-spots {
+  font-size: 13px;
+  font-weight: 700;
+  color: #D4A017;
+  background: rgba(212,160,23,0.12);
+  border: 1px solid rgba(212,160,23,0.25);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+.plan-spots-featured {
+  background: rgba(17,17,17,0.12);
+  border-color: rgba(17,17,17,0.2);
+  color: var(--dark);
+}
+
+/* ─── plan-white (Індивідуальний) ─── */
+.plan.plan-white {
+  background: #ffffff;
+  border: 2px solid var(--gold);
+}
+.plan.plan-white:hover { border-color: var(--gold); }
+.plan.plan-white .plan-tier { color: var(--text-light); }
+.plan.plan-white .plan-name { color: var(--dark); }
+.plan.plan-white .plan-price { color: var(--gold); }
+.plan.plan-white .plan-divider { background: var(--border); }
+.plan.plan-white .plan-features li { color: var(--text-mid); }
+.plan.plan-white .plan-check { background: rgba(212,160,23,0.15); }
+.plan.plan-white .plan-spots { color: var(--dark); background: var(--bg-soft); border-color: var(--border); }
+
+/* ─── btn-gold-solid ─── */
+.btn-gold-solid {
+  background: var(--gold);
+  color: var(--dark);
+  padding: 15px 28px;
+  font-weight: 800;
+}
+.btn-gold-solid:hover { background: #e6b420; }
+
 /* ─── FAQ ─── */
 .faq { background: var(--bg-soft); }
 .faq-grid {
@@ -1129,7 +1171,6 @@ footer {
         <div class="plan-tier">Базовий</div>
         <div class="plan-name">Все сам</div>
         <div class="plan-price"><span class="plan-price-cur">₴</span>8 300</div>
-        <div class="plan-price-note">Залишилось 5 місць на квітень</div>
         <hr class="plan-divider">
         <ul class="plan-features">
           <li><span class="plan-check"><svg viewBox="0 0 10 10" fill="none" stroke="#D4A017" stroke-width="2"><polyline points="2,5 4,7 8,3"/></svg></span>16 відеоуроків</li>
@@ -1142,6 +1183,7 @@ footer {
           <li class="disabled"><span class="plan-check off"><svg viewBox="0 0 10 10" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"><line x1="2" y1="2" x2="8" y2="8"/><line x1="8" y1="2" x2="2" y2="8"/></svg></span>Поглиблений етап</li>
           <li class="disabled"><span class="plan-check off"><svg viewBox="0 0 10 10" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"><line x1="2" y1="2" x2="8" y2="8"/><line x1="8" y1="2" x2="2" y2="8"/></svg></span>Перевірка завдань</li>
         </ul>
+        <div class="plan-spots">🔥 Залишилось 5 місць на квітень</div>
         <div class="plan-btn-wrap">
           <a href="https://secure.wayforpay.com/button/b0eae006900d5" target="_blank" class="btn btn-white-ghost">Приєднатись</a>
         </div>
@@ -1152,7 +1194,6 @@ footer {
         <div class="plan-tier">Рекомендований</div>
         <div class="plan-name">Стандарт</div>
         <div class="plan-price"><span class="plan-price-cur">₴</span>11 470</div>
-        <div class="plan-price-note">Залишилось 2 місця на квітень</div>
         <hr class="plan-divider">
         <ul class="plan-features">
           <li><span class="plan-check"><svg viewBox="0 0 10 10" fill="none" stroke="#1a1a1a" stroke-width="2"><polyline points="2,5 4,7 8,3"/></svg></span>Усе з тарифу «Все сам»</li>
@@ -1164,16 +1205,16 @@ footer {
           <li><span class="plan-check"><svg viewBox="0 0 10 10" fill="none" stroke="#1a1a1a" stroke-width="2"><polyline points="2,5 4,7 8,3"/></svg></span>Доступ до клубу — 3 місяці</li>
           <li><span class="plan-check"><svg viewBox="0 0 10 10" fill="none" stroke="#1a1a1a" stroke-width="2"><polyline points="2,5 4,7 8,3"/></svg></span>Закритий чат для студентів</li>
         </ul>
+        <div class="plan-spots plan-spots-featured">🔥 Залишилось 2 місця на квітень</div>
         <div class="plan-btn-wrap">
           <a href="https://secure.wayforpay.com/button/b714c9b1f9ded" target="_blank" class="btn btn-dark-solid">Приєднатись</a>
         </div>
       </div>
 
-      <div class="plan">
+      <div class="plan plan-white">
         <div class="plan-tier">Преміум</div>
         <div class="plan-name">Індивідуальний</div>
         <div class="plan-price"><span class="plan-price-cur">₴</span>32 350</div>
-        <div class="plan-price-note">Залишилось 1 місце на квітень</div>
         <hr class="plan-divider">
         <ul class="plan-features">
           <li><span class="plan-check"><svg viewBox="0 0 10 10" fill="none" stroke="#D4A017" stroke-width="2"><polyline points="2,5 4,7 8,3"/></svg></span>Усе з тарифу «Стандарт»</li>
@@ -1182,8 +1223,9 @@ footer {
           <li><span class="plan-check"><svg viewBox="0 0 10 10" fill="none" stroke="#D4A017" stroke-width="2"><polyline points="2,5 4,7 8,3"/></svg></span>Допомога при складанні портфеля</li>
           <li><span class="plan-check"><svg viewBox="0 0 10 10" fill="none" stroke="#D4A017" stroke-width="2"><polyline points="2,5 4,7 8,3"/></svg></span>Підтримка після завершення курсу</li>
         </ul>
+        <div class="plan-spots">🔥 Залишилось 1 місце на квітень</div>
         <div class="plan-btn-wrap">
-          <a href="https://t.me/ekaterina_invest_tg" target="_blank" class="btn btn-white-ghost">Написати особисто</a>
+          <a href="https://t.me/ekaterina_invest_tg" target="_blank" class="btn btn-gold-solid">Написати особисто</a>
         </div>
       </div>
 
