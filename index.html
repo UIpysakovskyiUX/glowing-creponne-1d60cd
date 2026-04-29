@@ -13,6 +13,7 @@
   --gold-light: #FAEEDA;
   --gold-dark: #A07810;
   --dark: #111111;
+  --hero-bg: #F5F2ED;
   --dark2: #1C1C1C;
   --dark3: #252525;
   --text: #1a1a1a;
@@ -52,7 +53,7 @@ a { text-decoration: none; }
 
 /* ─── NAV ─── */
 .nav {
-  background: var(--dark);
+  background: var(--hero-bg);
   padding: 0 var(--px);
   height: 64px;
   display: flex;
@@ -61,13 +62,13 @@ a { text-decoration: none; }
   position: sticky;
   top: 0;
   z-index: 999;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(17,17,17,0.08);
 }
 
 .nav-logo {
   font-size: 16px;
   font-weight: 800;
-  color: #fff;
+  color: #000;
   letter-spacing: -0.3px;
 }
 .nav-logo span { color: var(--gold); }
@@ -83,7 +84,7 @@ a { text-decoration: none; }
 .nav-center a {
   font-size: 13px;
   font-weight: 600;
-  color: rgba(255,255,255,0.55);
+  color: rgba(0,0,0,0.7);
   letter-spacing: 0.2px;
   transition: color .2s;
 }
@@ -98,14 +99,14 @@ a { text-decoration: none; }
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  border: 1px solid rgba(255,255,255,0.12);
+  border: 1px solid rgba(17,17,17,0.15);
   display: flex;
   align-items: center;
   justify-content: center;
   transition: border-color .2s, background .2s;
 }
-.nav-icon:hover { border-color: var(--gold); background: rgba(212,160,23,0.1); }
-.nav-icon svg { width: 15px; height: 15px; fill: rgba(255,255,255,0.65); }
+.nav-icon:hover { border-color: var(--gold); background: rgba(212,160,23,0.15); }
+.nav-icon svg { width: 15px; height: 15px; fill: rgba(17,17,17,0.55); }
 
 .nav-cta {
   background: var(--gold);
@@ -129,7 +130,7 @@ a { text-decoration: none; }
 .hamburger span {
   width: 22px;
   height: 2px;
-  background: rgba(255,255,255,0.7);
+  background: rgba(17,17,17,0.6);
   border-radius: 2px;
   transition: all .25s;
 }
@@ -146,7 +147,7 @@ a { text-decoration: none; }
   font-weight: 600;
   color: rgba(255,255,255,0.65);
   padding: 14px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(17,17,17,0.08);
   transition: color .2s;
 }
 .mobile-menu a:last-child { border-bottom: none; }
@@ -174,7 +175,7 @@ section { padding: 80px 0; }
 
 /* ─── HERO ─── */
 .hero {
-  background: var(--dark);
+  background: var(--hero-bg);
   padding: 0;
   min-height: 100svh;
   display: flex;
@@ -206,6 +207,8 @@ section { padding: 80px 0; }
   justify-content: flex-end;
   align-self: flex-end;
   margin-right: -24px;
+  position: relative;
+  z-index: 5;
 }
 .hero-photo img {
   width: 100%;
@@ -220,16 +223,17 @@ section { padding: 80px 0; }
   position: absolute;
   border-radius: 50%;
   pointer-events: none;
+  z-index: 0;
 }
 .hero-bg-circle.c1 {
   width: 520px; height: 520px;
   right: -80px; top: -80px;
-  border: 1px solid rgba(212,160,23,0.12);
+  border: 1px solid rgba(212,160,23,0.25);
 }
 .hero-bg-circle.c2 {
   width: 340px; height: 340px;
   right: 40px; top: 40px;
-  border: 1px solid rgba(212,160,23,0.08);
+  border: 1px solid rgba(212,160,23,0.18);
 }
 .hero-bg-dot {
   position: absolute;
@@ -238,9 +242,10 @@ section { padding: 80px 0; }
   transform: translateY(-50%);
   width: 320px;
   height: 320px;
-  background-image: radial-gradient(circle, rgba(212,160,23,0.12) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(212,160,23,0.2) 1px, transparent 1px);
   background-size: 20px 20px;
   pointer-events: none;
+  z-index: 0;
 }
 
 .hero-content {
@@ -256,22 +261,22 @@ section { padding: 80px 0; }
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(212,160,23,0.12);
-  border: 1px solid rgba(212,160,23,0.25);
+  background: rgba(212,160,23,0.15);
+  border: 1px solid rgba(212,160,23,0.35);
   border-radius: 100px;
   padding: 7px 18px;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: var(--gold);
+  color: #8B6914;
   margin-bottom: 28px;
 }
 
 .hero h1 {
   font-size: clamp(36px, 6vw, 68px);
   font-weight: 900;
-  color: #fff;
+  color: #000;
   line-height: 1.05;
   letter-spacing: -1.5px;
   margin-bottom: 22px;
@@ -285,7 +290,7 @@ section { padding: 80px 0; }
 .hero-desc {
   font-size: 17px;
   font-weight: 400;
-  color: rgba(255,255,255,0.55);
+  color: rgba(0,0,0,0.65);
   line-height: 1.65;
   margin-bottom: 40px;
   max-width: 480px;
@@ -312,11 +317,11 @@ section { padding: 80px 0; }
 .btn-gold:hover { background: #e6b420; transform: translateY(-1px); }
 .btn-outline-white {
   background: transparent;
-  color: rgba(255,255,255,0.7);
+  color: var(--dark);
   padding: 15px 28px;
-  border: 1px solid rgba(255,255,255,0.18);
+  border: 2px solid rgba(17,17,17,0.3);
 }
-.btn-outline-white:hover { border-color: rgba(255,255,255,0.4); color: #fff; }
+.btn-outline-white:hover { border-color: var(--dark); color: var(--dark); background: rgba(17,17,17,0.06); }
 
 .hero-actions {
   display: flex;
@@ -329,14 +334,14 @@ section { padding: 80px 0; }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1px;
-  background: rgba(255,255,255,0.06);
+  background: rgba(0,0,0,0.08);
   border-radius: var(--radius-md);
   overflow: hidden;
   margin-top: 56px;
-  border: 1px solid rgba(255,255,255,0.06);
+  border: 1px solid rgba(0,0,0,0.08);
 }
 .hero-stat {
-  background: rgba(255,255,255,0.03);
+  background: rgba(255,255,255,0.6);
   padding: 20px 16px;
   text-align: center;
 }
@@ -350,7 +355,7 @@ section { padding: 80px 0; }
 .hero-stat-label {
   font-size: 11px;
   font-weight: 600;
-  color: rgba(255,255,255,0.35);
+  color: rgba(0,0,0,0.6);
   margin-top: 6px;
   text-transform: uppercase;
   letter-spacing: 0.8px;
@@ -640,7 +645,7 @@ section { padding: 80px 0; }
   letter-spacing: -0.3px;
   margin-bottom: 6px;
 }
-
+.plan.featured .plan-name { color: #fff; }
 
 .plan-price {
   font-size: 40px;
@@ -651,7 +656,7 @@ section { padding: 80px 0; }
   margin-bottom: 4px;
 }
 .plan.featured .plan-price { color: var(--dark); }
-.plan-price-cur { font-size: 20px; font-weight: 700; }
+.plan-price-cur { font-size: 18px; font-weight: 600; }
 .plan-price-note {
   font-size: 12px;
   font-weight: 600;
@@ -865,7 +870,7 @@ footer {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 40px;
   padding-bottom: 40px;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(17,17,17,0.08);
 }
 .footer-brand-name {
   font-size: 18px;
@@ -973,7 +978,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1px;
-  background: rgba(255,255,255,0.1); /* чуть светлее для контраста */
+  background: rgba(17,17,17,0.06);
   border-radius: var(--radius-md);
   overflow: hidden;
   margin-top: 40px;
@@ -981,7 +986,7 @@ footer {
 }
 
 .hero-stat {
-  background: rgba(0,0,0,0.2);
+  background: rgba(255,255,255,0.6);
   padding: 15px 5px; /* уменьшил отступы, чтобы текст не прыгал */
   text-align: center;
 }
@@ -1203,7 +1208,7 @@ footer {
           <div class="stage-num" style="background:var(--gold);color:var(--dark);">5</div>
           <div>
             <div class="stage-title" style="color:#fff; margin-bottom:4px;">Поглиблений розділ</div>
-            <div class="stage-badge"><span style="color:#ffff;">Стандарт</span> + Індивідуальний</div>
+            <div class="stage-badge">Стандарт + Індивідуальний</div>
           </div>
         </div>
         <div class="stage-special-grid">
@@ -1240,7 +1245,7 @@ footer {
       <div class="plan">
         <div class="plan-tier">Базовий</div>
         <div class="plan-name">Все сам</div>
-        <div class="plan-price"><span class="plan-price-cur">₴</span>8 300</div>
+        <div class="plan-price">8 300 <span class="plan-price-cur">грн</span></div>
         <hr class="plan-divider">
         <ul class="plan-features">
           <li><span class="plan-check"><svg viewBox="0 0 10 10" fill="none" stroke="#D4A017" stroke-width="2"><polyline points="2,5 4,7 8,3"/></svg></span>16 відеоуроків</li>
@@ -1263,7 +1268,7 @@ footer {
         <div class="plan-popular">Найпопулярніший</div>
         <div class="plan-tier">Рекомендований</div>
         <div class="plan-name">Стандарт</div>
-        <div class="plan-price"><span class="plan-price-cur">₴</span>11 470</div>
+        <div class="plan-price">11 470 <span class="plan-price-cur">грн</span></div>
         <hr class="plan-divider">
         <ul class="plan-features">
           <li><span class="plan-check"><svg viewBox="0 0 10 10" fill="none" stroke="#1a1a1a" stroke-width="2"><polyline points="2,5 4,7 8,3"/></svg></span>Усе з тарифу «Все сам»</li>
@@ -1284,7 +1289,7 @@ footer {
       <div class="plan plan-white">
         <div class="plan-tier">Преміум</div>
         <div class="plan-name">Індивідуальний</div>
-        <div class="plan-price"><span class="plan-price-cur">₴</span>32 350</div>
+        <div class="plan-price">32 350 <span class="plan-price-cur">грн</span></div>
         <hr class="plan-divider">
         <ul class="plan-features">
           <li><span class="plan-check"><svg viewBox="0 0 10 10" fill="none" stroke="#D4A017" stroke-width="2"><polyline points="2,5 4,7 8,3"/></svg></span>Усе з тарифу «Стандарт»</li>
@@ -1311,12 +1316,12 @@ footer {
     <div class="faq-grid">
       <div class="faq-card">
         <div class="faq-num">01</div>
-        <div class="faq-q">Чи підійде цей курс для новачка?</div>
+        <div class="faq-q">Курс підійде для новачка?</div>
         <div class="faq-a">Так. Цей курс — практичний посібник для кожного, хто хоче створити капітал та почати інвестувати. Ми розглядаємо всі інструменти, будуємо власну стратегію та закріплюємо теорію на практиці.</div>
       </div>
       <div class="faq-card">
         <div class="faq-num">02</div>
-        <div class="faq-q">У якому форматі проходить цей курс?</div>
+        <div class="faq-q">У якому форматі проходить курс?</div>
         <div class="faq-a">Курс складається з 4–5 етапів. Ви переглядаєте відео та виконуєте завдання, щоб у результаті скласти інвестиційну стратегію. У тарифах «Стандарт» та «Індивідуальний» — перевірка завдань, закритий чат і бонусний 5-й етап.</div>
       </div>
       <div class="faq-card">
